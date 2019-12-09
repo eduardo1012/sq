@@ -52,6 +52,7 @@ Version de PHP: 5.6.3
 		$mail2=mysqli_real_escape_string($con,(strip_tags($_POST["nMail2"],ENT_QUOTES)));
 		$tel1=mysqli_real_escape_string($con,(strip_tags($_POST["nTel1"],ENT_QUOTES)));
 		$tel2=mysqli_real_escape_string($con,(strip_tags($_POST["nTel2"],ENT_QUOTES)));
+
 		
 		if ($_FILES['archivo']["error"] > 0){
 		  echo "Error: " . $_FILES['archivo']['error'] . "<br>";

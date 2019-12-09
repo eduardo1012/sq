@@ -72,6 +72,11 @@
 														data-mail2="'.$columna['mail2'].'"
 														data-telefono1="'.$columna['telefono1'].'"
 														data-telefono2="'.$columna['telefono2'].'"
+														data-fecha="'.$columna['fecha'].'"
+														data-importe="'.$columna['mutuo'].'"
+														data-refrendo="'.$columna['refrendo'].'"
+														data-desempeno="'.$columna['desempeno'].'"
+														data-abono="'.$columna['abono'].'"
 													> <i class="fa fa-eye"></i> </button>
 													
 													<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#dataDelete" data-id_proveedor="'.$columna['id_proveedor'].'" ><i class="fa fa-remove"></i> </button>

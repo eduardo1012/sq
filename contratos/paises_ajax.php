@@ -16,13 +16,13 @@
 		$adjacents  = 4; //brecha entre páginas después de varios adyacentes
 		$offset = ($page - 1) * $per_page;
 		//Cuenta el número total de filas de la tabla*/
-		$count_query   = mysqli_query($con,"SELECT count(*) AS numrows FROM proveedores WHERE eliminado = 0");
+		$count_query   = mysqli_query($con,"SELECT count(*) AS numrows FROM proveedores,pago WHERE eliminado = 0 ");
 		if ($row= mysqli_fetch_array($count_query)){$numrows = $row['numrows'];}
 		$total_pages = ceil($numrows/$per_page);
 		$reload = 'contrato.php';
 		//consulta principal para recuperar los datos
-		$query = mysqli_query($con,"SELECT * FROM proveedores WHERE eliminado = 0 order by id_proveedor LIMIT $offset,$per_page");
-		
+		$query = mysqli_query($con,"SELECT * FROM proveedores,pago WHERE eliminado=0 and id_proveedor = id_proveedo  order by id_proveedor LIMIT $offset,$per_page");
+		$query2 = mysqli_query($con,"SELECT * FROM pago");
 		if ($numrows>0){
 			?>
 				
@@ -72,7 +72,14 @@
 															data-mail1="'.$columna['mail1'].'"
 															data-mail2="'.$columna['RFC'].'"
 															data-telefono1="'.$columna['telefono1'].'"
-															data-telefono2="'.$columna['telefono2'].'"> 
+															data-telefono2="'.$columna['fecha'].'"
+															data-fecha="'.$columna['fecha'].'"
+															data-importe="'.$columna['mutuo'].'"
+															data-refrendo="'.$columna['refrendo'].'"
+															data-desempeno="'.$columna['desempeno'].'"
+															data-abono="'.$columna['abono'].'"
+															> 
+
 															<i class="fa fa-eye"></i> </button>
 													
 													<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal"   data-target="#dataDelete" data-id_proveedor="'.$columna['id_proveedor'].'" > <i class="fa fa-remove"></i> </button>

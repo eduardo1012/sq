@@ -117,6 +117,29 @@
 							</div>
 						</div>
 						<br>
+						<div class="row">
+							<div class="col-sm-6">
+								<label for="nFecha">Fecha</label>
+								<input type="text" id="nFecha" name="nFecha" class="form-control form-control-sm" required>
+							</div>
+							<div class="col-sm-4">
+								<label for="nImporte">Importe del mutuo</label>
+								<input type="text" id="nImporte" name="nImporte" class="form-control form-control-sm" required>
+							</div>
+							<div class="col-sm-4">
+								<label for="nRefrendo">Por refrendo</label>
+								<input type="text" id="nRefrendo" name="nRefrendo" class="form-control form-control-sm" required>
+							</div>
+							<div class="col-sm-4">
+								<label for="nDesempeno">Por desempeño</label>
+								<input type="text" id="nDesempeno" name="nDesempeno" class="form-control form-control-sm" required>
+							</div>
+							<div class="col-sm-4">
+								<label for="nAbonoc">Abono a capital</label>
+								<input type="text" id="nAbonoc" name="nAbonoc" class="form-control form-control-sm" required>
+							</div>
+						</div>
+						<br>
 						<br>
 
 						<div class="row">
@@ -146,22 +169,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-							
-								
-						   
-								echo'
-									<tr>
-									<td scope="row" class="font-weight-normal td-sm" height="25">'.$columna['id_proveedor'].'</td>
-												  <td class="font-weight-normal td-sm" height="25">'.$columna['fecha'].'</td>
-												  <td class="font-weight-normal td-sm" height="25">'.$columna['mutuo'].'</td>
-												  <td class="font-weight-normal td-sm" height="25">'.$columna['refrendo'].'</td>
-												  <td class="font-weight-normal td-sm" height="25">'.$columna['desempeño'].'</td>
-												  <td class="font-weight-normal td-sm" height="25">'.$columna['abono'].'</td>
-											</tr>
 
-								';
-							?>
 						</tbody>
 					</table>
 				
